@@ -30,9 +30,10 @@ AI動画制作の実験・作品アーカイブ。
 ## 作品（Works）
 
 ### Character Reference Videos (Grok I2V)
-- Meadow Run: https://v3b.fal.media/files/b/0a8ed5cf/yigUuPv8RL5n9mnx8r5Xj_GK4K8I1g.mp4
-- Spaceship Awe: https://v3b.fal.media/files/b/0a8ed5cf/4l1U3mYiE5vC4mA4kIYoA_0DtnFzD.mp4
-- Shibuya Rain Walk: https://v3b.fal.media/files/b/0a8ed5cf/9xQp8N1k7Qv2sKa2E9xF0_q2M8bJ1.mp4
+- Meadow Run: https://v3b.fal.media/files/b/0a8ee3d1/oHEIxJeLVdUuMzUxflNFW_gHp6f9OU.mp4
+- Spaceship Awe: https://v3b.fal.media/files/b/0a8ee3d1/O7kil6Vt35v4mPLEs73l1_l2Vm7FDH.mp4
+- Shibuya Rain Walk: https://v3b.fal.media/files/b/0a8ee3d1/RAZM9vWO4zoAxv82Ux2C2_silLs0s0.mp4
+- Rooftop Sunrise Dance (Today): https://v3b.fal.media/files/b/0a8f1fdd/eMC5qzAPIH7Y30dUEw_ci_2NTpJGOQ.mp4
 
 > NOTE: 作品URLは一定期間で失効する可能性あり。今後はリリース資産または外部ストレージ保管を検討。
 
