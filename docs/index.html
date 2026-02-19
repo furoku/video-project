@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Project Gallery</title>
+  <style>
+    body{font-family:system-ui,-apple-system,sans-serif;background:#f6f7fb;color:#1a1a2e;margin:0;padding:24px}
+    .wrap{max-width:1100px;margin:0 auto}
+    h1{margin:0 0 8px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:20px}
+    .card{background:white;border:1px solid #ddd;border-radius:12px;padding:12px}
+    video{width:100%;border-radius:8px;background:#000}
+    a{color:#2563eb}
+    .meta{font-size:13px;color:#555}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>🎬 Video Project Gallery</h1>
+    <p class="meta">Character reference experiments (Kling O1 → Grok I2V)</p>
+    <div class="grid">
+      <div class="card"><h3>Meadow Run</h3><video controls src="https://v3b.fal.media/files/b/0a8ee3d1/oHEIxJeLVdUuMzUxflNFW_gHp6f9OU.mp4"></video></div>
+      <div class="card"><h3>Spaceship Awe</h3><video controls src="https://v3b.fal.media/files/b/0a8ee3d1/O7kil6Vt35v4mPLEs73l1_l2Vm7FDH.mp4"></video></div>
+      <div class="card"><h3>Shibuya Rain Walk</h3><video controls src="https://v3b.fal.media/files/b/0a8ee3d1/RAZM9vWO4zoAxv82Ux2C2_silLs0s0.mp4"></video></div>
+      <div class="card"><h3>Rooftop Sunrise Dance</h3><video controls src="https://v3b.fal.media/files/b/0a8f1fdd/eMC5qzAPIH7Y30dUEw_ci_2NTpJGOQ.mp4"></video></div>
+    </div>
+    <p class="meta">Repo: <a href="https://github.com/furoku/video-project">github.com/furoku/video-project</a></p>
+  </div>
+</body>
+</html>

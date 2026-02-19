@@ -42,3 +42,6 @@ AI動画制作の実験・作品アーカイブ。
 - [ ] テンプレート化（scene prompt pack）
 - [ ] 週次でベストショットを選出
 
+
+## Gallery
+- GitHub Pages: https://furoku.github.io/video-project/
