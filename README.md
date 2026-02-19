@@ -37,6 +37,11 @@ AI動画制作の実験・作品アーカイブ。
 
 > NOTE: 作品URLは一定期間で失効する可能性あり。今後はリリース資産または外部ストレージ保管を検討。
 
+## Main Video（60秒）
+- ファイル: `docs/assets/main-journey-60s.mp4`
+- GitHub Pagesのトップ（`docs/index.html`）先頭に **Main Video** セクションを追加し、ブラウザ上で再生可能にしています。
+- 元ファイル: `/tmp/journey60/main-journey-60s-final.mp4`（duration ≈ 60s を確認）
+
 ## Next
 - [ ] 作品保存先の恒久化（GitHub Releases / Cloud storage）
 - [ ] テンプレート化（scene prompt pack）
