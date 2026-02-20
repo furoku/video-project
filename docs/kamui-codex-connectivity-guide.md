@@ -177,5 +177,30 @@ KAMUI_CODE_PASS_KEY='***' mcporter --config ... call ...
 
 ---
 
+## 11) 1コマンドヘルスチェック（追加）
+
+`scripts/kamui-healthcheck.sh` を追加済み。以下で実行:
+
+```bash
+cd /home/flock_h/video-project
+./scripts/kamui-healthcheck.sh
+```
+
+実生成まで含む疎通確認をしたい場合:
+
+```bash
+cd /home/flock_h/video-project
+RUN_CALL_TEST=1 ./scripts/kamui-healthcheck.sh
+```
+
+主な確認内容:
+- mcporter存在/バージョン
+- configファイル存在
+- `KAMUI_CODE_PASS_KEY` の実行コンテキスト内有無
+- `mcporter list --output json` のサーバー状態
+- （任意）t2iの最小呼び出し
+
+---
+
 このガイドに沿えば、
 「CodexがKamuiに繋がらない」問題はほぼ再現・解決できます。

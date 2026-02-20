@@ -45,6 +45,7 @@ AI動画制作の実験・作品アーカイブ。
 ## Playbook
 - 制作ノウハウ（遷移設計中心）: `docs/shooting-knowhow.md`
 - Kamui疎通ガイド（Codex接続）: `docs/kamui-codex-connectivity-guide.md`
+- Kamuiワンコマンド診断: `scripts/kamui-healthcheck.sh`
 
 ## Next
 - [ ] 作品保存先の恒久化（GitHub Releases / Cloud storage）
