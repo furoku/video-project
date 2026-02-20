@@ -42,6 +42,9 @@ AI動画制作の実験・作品アーカイブ。
 - GitHub Pagesのトップ（`docs/index.html`）先頭に **Main Video** セクションを追加し、ブラウザ上で再生可能にしています。
 - 元ファイル: `/tmp/journey60/main-journey-60s-final.mp4`（duration ≈ 60s を確認）
 
+## Playbook
+- 制作ノウハウ（遷移設計中心）: `docs/shooting-knowhow.md`
+
 ## Next
 - [ ] 作品保存先の恒久化（GitHub Releases / Cloud storage）
 - [ ] テンプレート化（scene prompt pack）
