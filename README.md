@@ -1,57 +1,47 @@
-# 🎬 Video Project Lab
+# 🎬 AI Video Project Lab
 
-AI動画制作の実験・作品アーカイブ。
+AI動画制作で、**同じキャラクターを別の場面でも保つ方法**と、静止画から動画へつなぐ制作フローを検証した作品・ノウハウのアーカイブです。
 
-## 目的
-- キャラクター一貫性を保った動画生成ワークフローを確立する
-- プロンプト設計・生成パイプライン・運用ノウハウを蓄積する
-- 作品を継続的に公開して改善する
+**Gallery:** https://furoku.github.io/video-project/
 
-## 現在の基本ワークフロー
-1. **Reference Image** を用意
-2. **Kling Image O1 (I2I)** で「同一キャラの別シーン」を作る
-3. **Grok Imagine Video (I2V)** で動画化
-4. Discordでレビュー → 次のプロンプトへ反映
+## このリポジトリの内容
 
-## 学んだこと（Lessons Learned）
+- 約60秒のメイン映像と制作素材
+- キャラクター一貫性を高めるための試行記録
+- シーン遷移、カメラワーク、プロンプト設計のメモ
+- 生成サービスとの接続確認や運用時の注意点
 
-### 1) キャラ一貫性
-- いきなり動画化より、**先に静止画で別シーンを作ってから動画化**した方が安定する
-- 参照画像 + シーン固有の行動（例: 走る/振り返る/見上げる）を明示すると崩れにくい
+## 検証した基本フロー
 
-### 2) プロンプト設計
-- 「このシーンから始めない」を明文化すると、同じ構図の再出力を避けやすい
-- カメラワーク（push in / orbit / handheld）を入れると映像の意図が通りやすい
+1. 基準となるキャラクター画像を用意する
+2. Image-to-Imageで同じキャラクターの別シーンを作る
+3. Image-to-Videoで各シーンを動画化する
+4. つながりと破綻を確認し、プロンプトへ反映する
 
-### 3) 運用
-- Kamui/FALは**レートリミット**と**残高**の2軸で詰まることがある
-- 失敗時はワンショットcronでリトライ戦略を組むと運用が安定する
+使用サービスの例として、Kling Image O1、Grok Imagine Video、Kamui / FALを扱っています。外部サービスの仕様、料金、利用可能モデルは変更される場合があります。
 
-## 作品（Works）
+## 主な成果物
 
-### Character Reference Videos (Grok I2V)
-- Meadow Run: https://v3b.fal.media/files/b/0a8ee3d1/oHEIxJeLVdUuMzUxflNFW_gHp6f9OU.mp4
-- Spaceship Awe: https://v3b.fal.media/files/b/0a8ee3d1/O7kil6Vt35v4mPLEs73l1_l2Vm7FDH.mp4
-- Shibuya Rain Walk: https://v3b.fal.media/files/b/0a8ee3d1/RAZM9vWO4zoAxv82Ux2C2_silLs0s0.mp4
-- Rooftop Sunrise Dance (Today): https://v3b.fal.media/files/b/0a8f1fdd/eMC5qzAPIH7Y30dUEw_ci_2NTpJGOQ.mp4
+- **Main Video:** [`docs/assets/main-journey-60s.mp4`](docs/assets/main-journey-60s.mp4)
+- **Gallery:** [`docs/index.html`](docs/index.html)
+- **撮影・遷移ノウハウ:** [`docs/shooting-knowhow.md`](docs/shooting-knowhow.md)
+- **Kamui接続ガイド:** [`docs/kamui-codex-connectivity-guide.md`](docs/kamui-codex-connectivity-guide.md)
+- **プロンプトメモ:** [`prompts.md`](prompts.md)
 
-> NOTE: 作品URLは一定期間で失効する可能性あり。今後はリリース資産または外部ストレージ保管を検討。
+## 分かったこと
 
-## Main Video（60秒）
-- ファイル: `docs/assets/main-journey-60s.mp4`
-- GitHub Pagesのトップ（`docs/index.html`）先頭に **Main Video** セクションを追加し、ブラウザ上で再生可能にしています。
-- 元ファイル: `/tmp/journey60/main-journey-60s-final.mp4`（duration ≈ 60s を確認）
+### キャラクター一貫性
 
-## Playbook
-- 制作ノウハウ（遷移設計中心）: `docs/shooting-knowhow.md`
-- Kamui疎通ガイド（Codex接続）: `docs/kamui-codex-connectivity-guide.md`
-- Kamuiワンコマンド診断: `scripts/kamui-healthcheck.sh`
+いきなり動画を生成するより、先に同じキャラクターの静止画を場面ごとに作り、その画像を動画化する方が安定しました。参照画像に加えて、走る・振り返る・見上げるなど、場面固有の行動を明示すると意図を保ちやすくなります。
 
-## Next
-- [ ] 作品保存先の恒久化（GitHub Releases / Cloud storage）
-- [ ] テンプレート化（scene prompt pack）
-- [ ] 週次でベストショットを選出
+### プロンプト設計
 
+開始構図として避けたい状態を明記すると、同じ構図の繰り返しを減らせました。`push in`、`orbit`、`handheld`のようにカメラの動きも指定すると、映像の目的が伝わりやすくなります。
 
-## Gallery
-- GitHub Pages: https://furoku.github.io/video-project/
+### 運用
+
+生成APIでは、レート制限と利用残高を別々に確認する必要があります。失敗した生成を自動で繰り返す場合も、上限回数と停止条件を先に決めることが重要です。
+
+## ステータス
+
+このリポジトリは**制作実験の記録**です。掲載した外部サービス名、モデル名、生成結果は制作時点のものであり、現在の提供状況を保証するものではありません。作品の恒久保存には、リポジトリ内のファイルとGitHub Pages上のギャラリーを使用しています。
